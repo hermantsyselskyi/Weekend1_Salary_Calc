@@ -1,6 +1,6 @@
 console.log('js');
 $ ( document).ready(readyNow);
-
+let totalMonthly = 0;
 let employees = [];
 class Employee{
 constructor (first, last, id, title, salary) {
@@ -21,14 +21,20 @@ function addEmp(){
 }
 function displayEmp(){
     let el = $('#empOut');
+    let pay = $('#outputMonthly');
     el.empty();
     for(emps of employees){
-        let outputString = '<li>';
-            outputString += emps.first;
-            outputString += emps.last;
-            outputString += emps.id;
-            outputString += emps.title;
-            outputString += emps.salary;
-            outputString += '</li>';
+        let outputString = '<div class="col-4">';
+            outputString += '<div class="card-header">' + emps.first + '</div>';
+            outputString += '<div class="card-body">' + emps.last + '</div>';
+            outputString += '<div class="card-body">' + emps.id + '</div>';
+            outputString += '<div class="card-body">' + emps.title + '</div>';
+            outputString += '<div type="number" class="card-footer">' + emps.salary + '</div>';
+            outputString += '<button class="btn btn-danger">Delete</button>';
+            outputString += '</div>';
+            totalMonthly += parseInt(emps.salary);
+            el.append ( outputString );
+            pay.empty();
+            pay.append( totalMonthly );
     } 
 }
