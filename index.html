@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Salary Calculator</title>
+        <script src="Vendors/jquery-3.3.1.min.js"></script>
+        <script src="Script/client.js"></script>
+        <link rel="stylesheet" href="Vendors/bootstrap.min.css">
+        <link rel="stylesheet" href="Style/style.css">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container">
+    <Section id="inputs">
+        <h2>Add Employee</h2>
+      <input type="text" placeholder="First Name" id="firstName">
+      <input type="text" placeholder="Last Name" id="lastName">
+      <input type="text" placeholder="ID" id="empId">
+      <input type="text" placeholder="Title" id="title">
+      <input type="text" placeholder="Annual Salary" id="annualSalary">
+
+
+    </Section>
+    <button class="btn btn-primary" id="submitEmp">Submit</button>
+    <div id="outputDiv">
+        <h2>Employees</h2>
+        <ul id="empOut">
+
+        </ul>
+    </div>
+</div>
+    </body>
+</html>
