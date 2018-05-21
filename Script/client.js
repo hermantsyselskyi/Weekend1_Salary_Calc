@@ -23,6 +23,7 @@ function displayEmp(){
     let el = $('#empOut');
     let pay = $('#outputMonthly');
     el.empty();
+    totalMonthly = 0;
     for(emps of employees){
         let outputString = '<div class="col-4">';
             outputString += '<div class="card-header">' + emps.first + '</div>';
@@ -32,7 +33,7 @@ function displayEmp(){
             outputString += '<div type="number" class="card-footer">' + emps.salary + '</div>';
             outputString += '<button class="btn btn-danger">Delete</button>';
             outputString += '</div>';
-            totalMonthly += parseInt(emps.salary);
+            totalMonthly = totalMonthly + parseInt(emps.salary);
             el.append ( outputString );
             pay.empty();
             pay.append( totalMonthly );
